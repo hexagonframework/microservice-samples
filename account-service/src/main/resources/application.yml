@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: account-service
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8401/users/me
+    client:
+      clientId: account-service
+      clientSecret: account@sec
+      accessTokenUri: http://localhost:8401/oauth/token
+      grant-type: client_credentials
+      scope: server
+
